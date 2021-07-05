@@ -11,7 +11,7 @@ import SwiftUI
 struct Backdrop_Coding_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView(cats: catsData)
         }
     }
 }

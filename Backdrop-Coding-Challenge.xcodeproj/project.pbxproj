@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		4E02D9472690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D9462690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift */; };
-		4E02D9492690D59800A84DB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D9482690D59800A84DB7 /* ContentView.swift */; };
 		4E02D94B2690D59900A84DB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E02D94A2690D59900A84DB7 /* Assets.xcassets */; };
 		4E02D94E2690D59900A84DB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E02D94D2690D59900A84DB7 /* Preview Assets.xcassets */; };
+		4E02D9562692483A00A84DB7 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D9552692483A00A84DB7 /* HomeView.swift */; };
+		4E02D958269248EF00A84DB7 /* CatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D957269248EF00A84DB7 /* CatRow.swift */; };
+		4E02D95B269252DE00A84DB7 /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D95A269252DE00A84DB7 /* Cat.swift */; };
+		4E02D95D269253BA00A84DB7 /* cats.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E02D95C269253BA00A84DB7 /* cats.json */; };
+		4E02D95F2692547C00A84DB7 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E02D95E2692547C00A84DB7 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4E02D9432690D59800A84DB7 /* Backdrop-Coding-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backdrop-Coding-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E02D9462690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backdrop_Coding_ChallengeApp.swift; sourceTree = "<group>"; };
-		4E02D9482690D59800A84DB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E02D94A2690D59900A84DB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E02D94D2690D59900A84DB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E02D94F2690D59900A84DB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E02D9552692483A00A84DB7 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		4E02D957269248EF00A84DB7 /* CatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatRow.swift; sourceTree = "<group>"; };
+		4E02D95A269252DE00A84DB7 /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		4E02D95C269253BA00A84DB7 /* cats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cats.json; sourceTree = "<group>"; };
+		4E02D95E2692547C00A84DB7 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,10 +60,13 @@
 		4E02D9452690D59800A84DB7 /* Backdrop-Coding-Challenge */ = {
 			isa = PBXGroup;
 			children = (
+				4E02D9592692523F00A84DB7 /* tempModel */,
 				4E02D9462690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift */,
-				4E02D9482690D59800A84DB7 /* ContentView.swift */,
+				4E02D9552692483A00A84DB7 /* HomeView.swift */,
+				4E02D957269248EF00A84DB7 /* CatRow.swift */,
 				4E02D94A2690D59900A84DB7 /* Assets.xcassets */,
 				4E02D94F2690D59900A84DB7 /* Info.plist */,
+				4E02D95C269253BA00A84DB7 /* cats.json */,
 				4E02D94C2690D59900A84DB7 /* Preview Content */,
 			);
 			path = "Backdrop-Coding-Challenge";
@@ -67,6 +78,15 @@
 				4E02D94D2690D59900A84DB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4E02D9592692523F00A84DB7 /* tempModel */ = {
+			isa = PBXGroup;
+			children = (
+				4E02D95E2692547C00A84DB7 /* Data.swift */,
+				4E02D95A269252DE00A84DB7 /* Cat.swift */,
+			);
+			path = tempModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +148,7 @@
 			files = (
 				4E02D94E2690D59900A84DB7 /* Preview Assets.xcassets in Resources */,
 				4E02D94B2690D59900A84DB7 /* Assets.xcassets in Resources */,
+				4E02D95D269253BA00A84DB7 /* cats.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,8 +159,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E02D9492690D59800A84DB7 /* ContentView.swift in Sources */,
+				4E02D95B269252DE00A84DB7 /* Cat.swift in Sources */,
+				4E02D95F2692547C00A84DB7 /* Data.swift in Sources */,
 				4E02D9472690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift in Sources */,
+				4E02D9562692483A00A84DB7 /* HomeView.swift in Sources */,
+				4E02D958269248EF00A84DB7 /* CatRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
