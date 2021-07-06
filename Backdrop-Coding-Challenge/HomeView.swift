@@ -9,7 +9,6 @@ import SwiftUI
 
 struct HomeView: View {
     
-    
     var cats:[Cat]
     
     var body: some View {
@@ -26,13 +25,28 @@ struct HomeView: View {
          ScrollView(.vertical, showsIndicators: false){
             VStack(){
                 ForEach(self.cats,id: \.name){ cat  in
-                    CatRow(cat: cat)
-                    
-     }
-    }
+                    CatItem(cat: cat)
+                    }
+                  }
+                }
+        
+            
+//            TabView {
+////                HomeView(cats: catsData)
+////                    .tabItem {
+////                        Image(systemName: "1.square.fill")
+////                        Text("First")
+////                    }
+//                
+//                LikeItemView()
+//                    .tabItem {
+//                        Image(systemName: "2.square.fill")
+//                        Text("Second")
+//                    }
+//            }
+//            .font(.headline)
+      }
    }
-  }
- }
 }
 
 struct HomeView_Previews: PreviewProvider {

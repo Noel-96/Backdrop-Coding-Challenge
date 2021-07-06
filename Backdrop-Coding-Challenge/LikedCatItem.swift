@@ -1,51 +1,56 @@
 //
-//  CatRow.swift
+//  LikedCatItem.swift
 //  Backdrop-Coding-Challenge
 //
-//  Created by Noel Obaseki on 04/07/2021.
+//  Created by Noel Obaseki on 05/07/2021.
 //
 
 import SwiftUI
 
-struct CatRow: View {
+struct LikedCatItem: View {
     var cat:Cat
-    
     var body: some View {
-        HStack(alignment: .center, spacing: 30){
+        VStack(alignment: .center){
             Image(cat.imageName).resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fill)
-                .frame(width:60,height:60)
+                .frame(width:150,height:150)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1))
-                .shadow(radius: 10)
+        
            
             
-            
+            HStack(alignment: .top){
             Text(cat.name)
                 .font(.headline)
                 .fontWeight(.regular)
+                .multilineTextAlignment(.leading)
                 .foregroundColor(.primary)
-            
+                .lineLimit(5)
+       
+                
             Spacer()
-            
-            Image("empty_heart").resizable()
+                
+            Image("redFilled_heart").resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fit)
                 .frame(width:30,height:30)
                 .cornerRadius(15)
                 .shadow(radius: 10)
+             }
+            .padding(.top)
+            .frame(width:150)
         }
-        .padding([.leading, .bottom, .trailing])
-      
+        .padding([.top, .leading])
+        .frame(width:150)
         
-        
+       
     }
 }
 
-struct CatRow_Previews: PreviewProvider {
+struct LikedCatItem_Previews: PreviewProvider {
     static var previews: some View {
-        CatRow(cat: catsData[0])
+        LikedCatItem(cat: catsData[0])
     }
 }
