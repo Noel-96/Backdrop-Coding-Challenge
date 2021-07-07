@@ -8,19 +8,22 @@
 import SwiftUI
 
 struct CatItem: View {
-    var cat:Cat
+    var cat:CatModel
+    @StateObject var viewModel = ImageProvider()
     
     var body: some View {
         HStack(alignment: .center, spacing: 15.0){
-            Image(cat.imageName).resizable()
+            Image(uiImage: viewModel.image).resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fill)
                 .frame(width:60,height:60)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1))
-                .shadow(radius: 10)
-           
+                .onAppear {
+                    viewModel.loadImage(url:URL(string: cat.image.url)! )
+                    }
+                
             
             
             Text(cat.name)
@@ -38,14 +41,7 @@ struct CatItem: View {
                 .shadow(radius: 10)
         }
         .padding([.leading, .bottom, .trailing])
-      
-        
-        
     }
 }
 
-struct CatRow_Previews: PreviewProvider {
-    static var previews: some View {
-        CatItem(cat: catsData[0])
-    }
-}
+//

@@ -17,35 +17,30 @@ struct LikedCatItem: View {
                 .frame(width:150,height:150)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black, lineWidth: 1))
-        
-           
+                            .stroke(Color.black, lineWidth: 1))
             
             HStack(alignment: .top){
-            Text(cat.name)
-                .font(.headline)
-                .fontWeight(.regular)
-                .multilineTextAlignment(.leading)
-                .foregroundColor(.primary)
-                .lineLimit(5)
-       
+                Text(cat.name)
+                    .font(.headline)
+                    .fontWeight(.regular)
+                    .multilineTextAlignment(.leading)
+                    .foregroundColor(.primary)
+                    .lineLimit(5)
                 
-            Spacer()
+                Spacer()
                 
-            Image("redFilled_heart").resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode:.fit)
-                .frame(width:30,height:30)
-                .cornerRadius(15)
-                .shadow(radius: 10)
-             }
+                Image("redFilled_heart").resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode:.fit)
+                    .frame(width:30,height:30)
+                    .cornerRadius(15)
+                    .shadow(radius: 10)
+            }
             .padding(.top)
             .frame(width:150)
         }
         .padding([.top, .leading])
         .frame(width:150)
-        
-       
     }
 }
 

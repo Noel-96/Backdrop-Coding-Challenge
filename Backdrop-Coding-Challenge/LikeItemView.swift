@@ -15,29 +15,26 @@ struct LikeItemView: View {
     
     var body: some View {
         VStack(){
-         Text("Cats I like")
-            .font(.custom("Helvetica Neue", size: 20))
-            .fontWeight(.medium)
-            .multilineTextAlignment(.leading)
-            .padding([.top, .leading, .bottom])
-            .frame(maxWidth: .infinity, alignment: .leading)
+            Text("Cats I like")
+                .font(.custom("Helvetica Neue", size: 20))
+                .fontWeight(.medium)
+                .multilineTextAlignment(.leading)
+                .padding([.top, .leading, .bottom])
+                .frame(maxWidth: .infinity, alignment: .leading)
             
-         Spacer()
+            Spacer()
             
-         ScrollView(.vertical, showsIndicators: false){
-            LazyVGrid(columns: layout, alignment: .center){
-                ForEach(self.Likedcats,id: \.name){ Likedcat  in
-                    LikedCatItem(cat: Likedcat)
-                }
-                
-                
-            }.frame(
-                minWidth: 0,
-                maxWidth: .infinity
-              )
-            
-         }
-      }
+            ScrollView(.vertical, showsIndicators: false){
+                LazyVGrid(columns: layout, alignment: .center){
+                    ForEach(self.Likedcats,id: \.name){ Likedcat  in
+                        LikedCatItem(cat: Likedcat)
+                    }
+                }.frame(
+                    minWidth: 0,
+                    maxWidth: .infinity
+                )
+            }
+        }
     }
 }
 
