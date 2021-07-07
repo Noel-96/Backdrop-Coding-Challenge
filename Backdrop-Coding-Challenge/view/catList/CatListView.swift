@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct CatListView: View {
+    @ObservedObject var viewModel: CatListViewModel
+    
     @State private var cats = [CatModel]()
     
    // var cats:[Cat]

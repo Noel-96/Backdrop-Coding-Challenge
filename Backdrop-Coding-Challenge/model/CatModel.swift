@@ -6,16 +6,13 @@
 //
 
 import Foundation
+
 struct CatModel: Codable, Hashable, Identifiable{
     var id: String
     var name: String
     var image: BreedImage
     
 }
-
-
-
-
 struct BreedImage: Codable , Hashable{
     let url: String
 }
