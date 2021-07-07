@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LikeItemView: View {
+struct LikedCatListView: View {
     var Likedcats:[Cat]
     
     let layout = [GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top),
@@ -41,7 +41,7 @@ struct LikeItemView: View {
 struct LikeItemView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LikeItemView(Likedcats: catsData)
+            LikedCatListView(Likedcats: catsData)
                 .previewDevice("iPhone 12 Pro Max")
         }
     }

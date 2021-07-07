@@ -19,7 +19,7 @@ struct HomeTabView: View {
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                 }
             
-            LikeItemView(Likedcats: catsData)
+            LikedCatListView(Likedcats: catsData)
                 .tabItem {
                     Image( "black_heart")
                     Text("Cats I Like")

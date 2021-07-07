@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 
 class ImageProvider: ObservableObject {
-    @Published var image = UIImage(named: "Iced Cappuccino")!
+    @Published var image = UIImage(named: "Loading_Default_Picture")!
     private var cancellable: AnyCancellable?
     private let imageLoader = ImageLoader()
 
