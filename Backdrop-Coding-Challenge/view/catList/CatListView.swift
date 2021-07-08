@@ -56,21 +56,28 @@ struct CatListView: View {
             
             Spacer()
             
+           // Text(viewModel.isLoading ? "Loading..." : "")
+            
             ScrollView(.vertical, showsIndicators: false){
                 VStack(){
-                    ForEach(self.cats,id: \.name){ cat  in
+                    ForEach(viewModel.models,id: \.name){ cat  in
                         CatItem(cat: cat)
                     }
                 }
-            }.onAppear(perform: LoadData)
+            }
+            //.onAppear(perform: { self.viewModel.apply(.onAppear) })
+            .onAppear(perform: fetchData)
         }
     }
-  
+    
+    private func fetchData() {
+        self.viewModel.fetchList()
+    }
    
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        CatListView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        CatListView()
+//    }
+//}

@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct Backdrop_Coding_ChallengeApp: App {
+    
     var body: some Scene {
         WindowGroup {
-         HomeTabView()
+            HomeTabView()
         }
     }
 }

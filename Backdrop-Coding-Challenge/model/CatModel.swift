@@ -6,6 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+typealias TopLevel = [CatModel]
 
 struct CatModel: Codable, Hashable, Identifiable{
     var id: String
