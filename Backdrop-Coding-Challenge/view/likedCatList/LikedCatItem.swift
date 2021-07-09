@@ -8,10 +8,14 @@
 import SwiftUI
 
 struct LikedCatItem: View {
-    var cat:Cat
+    var cat:LikedCat
+    @StateObject var likedCatItemViewModel: LikedCatItemViewModel
+    @StateObject var viewModel = ImageProvider()
+    
     var body: some View {
         VStack(alignment: .center){
-            Image(cat.imageName).resizable()
+            Image(uiImage:  UIImage(data: cat.imageUrl!)!)
+                .resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fill)
                 .frame(width:150,height:150)
@@ -19,8 +23,9 @@ struct LikedCatItem: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                             .stroke(Color.black, lineWidth: 1))
             
+            
             HStack(alignment: .top){
-                Text(cat.name)
+                Text(cat.catName ?? "default cat name")
                     .font(.headline)
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
@@ -31,6 +36,7 @@ struct LikedCatItem: View {
                 
                 Button(action: {
                     print("Edit red button was tapped")
+                    likedCatItemViewModel.removeLikedCatPicture(likedCat: cat)
                 }) {
                     Image( "redFilled_heart")
                         .resizable()
@@ -47,9 +53,9 @@ struct LikedCatItem: View {
         .frame(width:150)
     }
 }
-
-struct LikedCatItem_Previews: PreviewProvider {
-    static var previews: some View {
-        LikedCatItem(cat: catsData[0])
-    }
-}
+//
+//struct LikedCatItem_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LikedCatItem(cat: catsData[0])
+//    }
+//}

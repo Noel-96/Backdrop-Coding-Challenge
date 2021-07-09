@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct CatItem: View {
+    
     var cat:CatModel
+    @Environment(\.managedObjectContext) var managedObjectContext
     @StateObject var viewModel = ImageProvider()
+    @StateObject var catItemViewModel: CatItemViewModel
     
     var body: some View {
         HStack(alignment: .center, spacing: 15.0){
@@ -37,6 +40,9 @@ struct CatItem: View {
             
             Button(action: {
                 print("Edit button was tapped")
+                let likedCat = LikedCat(context: managedObjectContext)
+                let imageData = viewModel.image.jpegData(compressionQuality: 1.0)
+                catItemViewModel.likeCatPicture(id: cat.id, catName: cat.name, imageData: imageData!, isLiked: true, likedCat: likedCat)
             }) {
                 Image( "empty_heart")
                     .resizable()

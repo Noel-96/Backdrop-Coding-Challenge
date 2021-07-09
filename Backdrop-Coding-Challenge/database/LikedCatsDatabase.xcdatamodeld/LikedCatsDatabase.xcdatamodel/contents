@@ -3,7 +3,7 @@
     <entity name="LikedCat" representedClassName="LikedCat" syncable="YES" codeGenerationType="class">
         <attribute name="catName" optional="YES" attributeType="String"/>
         <attribute name="id" optional="YES" attributeType="String"/>
-        <attribute name="imageUrl" optional="YES" attributeType="String"/>
+        <attribute name="imageUrl" optional="YES" attributeType="Binary"/>
         <attribute name="isLiked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
     </entity>
     <elements>

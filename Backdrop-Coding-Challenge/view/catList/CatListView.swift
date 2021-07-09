@@ -22,17 +22,15 @@ struct CatListView: View {
             Spacer()
             
             if viewModel.isLoading {
-            Image("Loading_Default_Picture").resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode:.fit)
-                .frame(width:150,height:150)
+            ProgressView()
+                .frame(width: 40, height: 40)
             }
             
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack(){
                     ForEach(viewModel.models,id: \.name){ cat  in
-                        CatItem(cat: cat)
+                        CatItem(cat: cat, catItemViewModel: .init())
                     }
                 }
             }

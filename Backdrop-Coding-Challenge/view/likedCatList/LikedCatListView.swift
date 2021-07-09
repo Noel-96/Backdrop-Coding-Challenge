@@ -29,8 +29,8 @@ struct LikedCatListView: View {
             
             ScrollView(.vertical, showsIndicators: false){
                 LazyVGrid(columns: layout, alignment: .center){
-                    ForEach(self.Likedcats,id: \.name){ Likedcat  in
-                        LikedCatItem(cat: Likedcat)
+                    ForEach(LikedcatsDatas,id: \.self){ Likedcat  in
+                        LikedCatItem(cat: Likedcat, likedCatItemViewModel: .init())
                     }
                 }.frame(
                     minWidth: 0,
