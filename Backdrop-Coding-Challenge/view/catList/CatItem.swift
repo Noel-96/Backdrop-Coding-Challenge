@@ -13,6 +13,7 @@ struct CatItem: View {
     
     var body: some View {
         HStack(alignment: .center, spacing: 15.0){
+            
             Image(uiImage: viewModel.image).resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fill)
@@ -21,7 +22,7 @@ struct CatItem: View {
                 .overlay(RoundedRectangle(cornerRadius: 10)
                 .stroke(Color.black, lineWidth: 1))
                 .onAppear {
-                    viewModel.loadImage(url:URL(string: cat.image.url)! )
+                    viewModel.loadImage(url:URL(string: cat.image?.url ?? "https://miro.medium.com/max/1400/0*H3jZONKqRuAAeHnG.jpg")! )
                     }
                 
             
@@ -33,15 +34,24 @@ struct CatItem: View {
             
             Spacer()
             
-            Image("empty_heart").resizable()
-                .renderingMode(.original)
-                .aspectRatio(contentMode:.fit)
-                .frame(width:30,height:30)
-                .cornerRadius(15)
-                .shadow(radius: 10)
+            
+            Button(action: {
+                print("Edit button was tapped")
+            }) {
+                Image( "empty_heart")
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width:25,height:25)
+            }
+            
         }
         .padding([.leading, .bottom, .trailing])
     }
 }
 
-//
+//struct CatItem_Previews: PreviewProvider {
+//     static var previews: some View {
+//         CatItem(cat: catsData[0])
+//     }
+// }

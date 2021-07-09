@@ -15,8 +15,14 @@ final class CatListViewModel: ObservableObject{
     private var cancellables = Set<AnyCancellable>()
     
     @Published var isLoading = true
+    @Published var isCatLiked = false
     @Published var errorMessage = ""
     @Published var models = [CatModel]()
+    
+    
+    func likeCatPicture() {
+        isCatLiked.toggle()
+    }
     
     func fetchList() {
         self.networkRequest.fetchListSignal()

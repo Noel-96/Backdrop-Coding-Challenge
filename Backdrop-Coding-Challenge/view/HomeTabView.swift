@@ -8,8 +8,6 @@
 import SwiftUI
 
 struct HomeTabView: View {
-
-
     var body: some View {
         TabView {
             CatListView(viewModel: .init())
@@ -35,8 +33,8 @@ struct HomeTabView: View {
     }
 }
 
-//struct HomeTabView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HomeTabView()
-//    }
-//}
+struct HomeTabView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeTabView()
+    }
+}

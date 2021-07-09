@@ -29,12 +29,16 @@ struct LikedCatItem: View {
                 
                 Spacer()
                 
-                Image("redFilled_heart").resizable()
-                    .renderingMode(.original)
-                    .aspectRatio(contentMode:.fit)
-                    .frame(width:30,height:30)
-                    .cornerRadius(15)
-                    .shadow(radius: 10)
+                Button(action: {
+                    print("Edit red button was tapped")
+                }) {
+                    Image( "redFilled_heart")
+                        .resizable()
+                        .renderingMode(.original)
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width:25,height:25)
+                }
+               
             }
             .padding(.top)
             .frame(width:150)

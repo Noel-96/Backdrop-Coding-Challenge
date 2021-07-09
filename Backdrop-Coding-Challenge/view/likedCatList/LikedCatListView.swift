@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct LikedCatListView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+    @FetchRequest(entity: LikedCat.entity(), sortDescriptors:[NSSortDescriptor(keyPath: \LikedCat.catName, ascending: true)]) private var LikedcatsDatas: FetchedResults<LikedCat>
+    
     var Likedcats:[Cat]
     
     let layout = [GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top),
@@ -37,6 +40,8 @@ struct LikedCatListView: View {
         }
     }
 }
+
+
 
 struct LikeItemView_Previews: PreviewProvider {
     static var previews: some View {

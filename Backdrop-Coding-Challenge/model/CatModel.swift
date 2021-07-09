@@ -13,9 +13,9 @@ import SwiftUI
 struct CatModel: Codable, Hashable, Identifiable{
     var id: String
     var name: String
-    var image: BreedImage
+    var image: BreedImage?
     
 }
 struct BreedImage: Codable , Hashable{
-    let url: String
+    let url: String?
 }
