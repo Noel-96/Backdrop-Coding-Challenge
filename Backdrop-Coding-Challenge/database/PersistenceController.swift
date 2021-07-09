@@ -26,6 +26,7 @@ struct PersistenceController {
         let context = container.viewContext
         if context.hasChanges {
             do {
+                context.mergePolicy = NSMergeByPropertyObjectTrumpMergePolicy
                 try context.save()
                 completion(nil)
             } catch {

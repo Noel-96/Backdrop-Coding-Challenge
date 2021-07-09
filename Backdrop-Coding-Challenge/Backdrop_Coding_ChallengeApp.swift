@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import CoreData
+
+
 
 @main
 struct Backdrop_Coding_ChallengeApp: App {
@@ -15,7 +18,7 @@ struct Backdrop_Coding_ChallengeApp: App {
     var body: some Scene {
         WindowGroup {
             HomeTabView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }.onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase{
             case .background:

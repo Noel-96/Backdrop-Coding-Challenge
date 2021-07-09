@@ -11,7 +11,6 @@ import SwiftUI
 
 final class CatItemViewModel: ObservableObject{
     @Published var isCatLiked = false
-    //@Environment(\.managedObjectContext) var managedObjectContext
  
     
     func likeCatPicture(id: String, catName: String , imageData: Data, isLiked: Bool, likedCat: LikedCat) {
@@ -23,4 +22,11 @@ final class CatItemViewModel: ObservableObject{
         likedCat.isLiked = isLiked
         PersistenceController.shared.saveContext()
         }
+    
+    
+    func checkIfCatIsLiked(){
+        
+    }
+
+    
 }

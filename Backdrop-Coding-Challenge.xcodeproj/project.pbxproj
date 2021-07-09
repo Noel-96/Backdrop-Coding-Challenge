@@ -26,11 +26,9 @@
 		4EEF8D4F26972083006F82CD /* CatBreedNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D4E26972083006F82CD /* CatBreedNetworkRequest.swift */; };
 		4EEF8D51269722F2006F82CD /* URLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D50269722F2006F82CD /* URLBuilder.swift */; };
 		4EEF8D5926982E7E006F82CD /* LikedCatsDatabase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5726982E7E006F82CD /* LikedCatsDatabase.xcdatamodeld */; };
-		4EEF8D5C269839D1006F82CD /* LikedCatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5B269839D1006F82CD /* LikedCatListViewModel.swift */; };
 		4EEF8D5E26987B3F006F82CD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5D26987B3F006F82CD /* PersistenceController.swift */; };
 		4EEF8D602698C664006F82CD /* CatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5F2698C664006F82CD /* CatItemViewModel.swift */; };
 		4EEF8D622698C686006F82CD /* LikedCatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D612698C686006F82CD /* LikedCatItemViewModel.swift */; };
-		4EEF8D642698D6C9006F82CD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D632698D6C9006F82CD /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,11 +53,9 @@
 		4EEF8D4E26972083006F82CD /* CatBreedNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatBreedNetworkRequest.swift; sourceTree = "<group>"; };
 		4EEF8D50269722F2006F82CD /* URLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLBuilder.swift; sourceTree = "<group>"; };
 		4EEF8D5826982E7E006F82CD /* LikedCatsDatabase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LikedCatsDatabase.xcdatamodel; sourceTree = "<group>"; };
-		4EEF8D5B269839D1006F82CD /* LikedCatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCatListViewModel.swift; sourceTree = "<group>"; };
 		4EEF8D5D26987B3F006F82CD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		4EEF8D5F2698C664006F82CD /* CatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItemViewModel.swift; sourceTree = "<group>"; };
 		4EEF8D612698C686006F82CD /* LikedCatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCatItemViewModel.swift; sourceTree = "<group>"; };
-		4EEF8D632698D6C9006F82CD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,9 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				4EEF8D50269722F2006F82CD /* URLBuilder.swift */,
-				4EEF8D4526960666006F82CD /* image */,
+				4EEF8D4526960666006F82CD /* imageDownloader */,
 				4EEF8D3E2695E745006F82CD /* api */,
-				4EEF8D632698D6C9006F82CD /* Extensions.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -198,13 +193,13 @@
 			path = api;
 			sourceTree = "<group>";
 		};
-		4EEF8D4526960666006F82CD /* image */ = {
+		4EEF8D4526960666006F82CD /* imageDownloader */ = {
 			isa = PBXGroup;
 			children = (
 				4E832B3126949535009F5BA5 /* ImageLoader.swift */,
 				4E832B2F26949331009F5BA5 /* ImageProvider.swift */,
 			);
-			path = image;
+			path = imageDownloader;
 			sourceTree = "<group>";
 		};
 		4EEF8D5226982DF8006F82CD /* database */ = {
@@ -219,7 +214,6 @@
 		4EEF8D5A26983928006F82CD /* likedCatList */ = {
 			isa = PBXGroup;
 			children = (
-				4EEF8D5B269839D1006F82CD /* LikedCatListViewModel.swift */,
 				4EEF8D612698C686006F82CD /* LikedCatItemViewModel.swift */,
 			);
 			path = likedCatList;
@@ -308,9 +302,7 @@
 				4E02D95F2692547C00A84DB7 /* Data.swift in Sources */,
 				4EEF8D5E26987B3F006F82CD /* PersistenceController.swift in Sources */,
 				4E02D9472690D59800A84DB7 /* Backdrop_Coding_ChallengeApp.swift in Sources */,
-				4EEF8D642698D6C9006F82CD /* Extensions.swift in Sources */,
 				4E832B3026949331009F5BA5 /* ImageProvider.swift in Sources */,
-				4EEF8D5C269839D1006F82CD /* LikedCatListViewModel.swift in Sources */,
 				4E02D9562692483A00A84DB7 /* CatListView.swift in Sources */,
 				4E02D958269248EF00A84DB7 /* CatItem.swift in Sources */,
 				4E832B292694860B009F5BA5 /* CatModel.swift in Sources */,
