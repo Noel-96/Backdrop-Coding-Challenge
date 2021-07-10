@@ -8,14 +8,11 @@
 import Foundation
 import Combine
 import SwiftUI
+import CoreData
 
 final class CatItemViewModel: ObservableObject{
-    @Published var isCatLiked = false
  
-    
     func likeCatPicture(id: String, catName: String , imageData: Data, isLiked: Bool, likedCat: LikedCat) {
-        isCatLiked.toggle()
-    
         likedCat.catName = catName
         likedCat.id = id
         likedCat.imageUrl = imageData
@@ -23,10 +20,16 @@ final class CatItemViewModel: ObservableObject{
         PersistenceController.shared.saveContext()
         }
     
-    
-    func checkIfCatIsLiked(){
-        
+    func checkIfCatIsLiked(id: String, managedObjectContext: NSManagedObjectContext) -> Bool{
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "LikedCat")
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        var entitiesCount = 0
+        do {
+            entitiesCount = try managedObjectContext.count(for: fetchRequest)
+        }
+        catch {
+            print("error executing fetch request: \(error)")
+        }
+        return entitiesCount > 0
     }
-
-    
 }

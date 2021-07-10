@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct LikedCatListView: View {
+    
     @Environment(\.managedObjectContext) var managedObjectContext
-    @FetchRequest(entity: LikedCat.entity(), sortDescriptors:[NSSortDescriptor(keyPath: \LikedCat.catName, ascending: true)]) private var LikedcatsDatas: FetchedResults<LikedCat>
+    @FetchRequest(entity: LikedCat.entity(), sortDescriptors:[NSSortDescriptor(keyPath: \LikedCat.catName, ascending: true)]) private var Likedcats: FetchedResults<LikedCat>
     
-    var Likedcats:[Cat]
-    
-    let layout = [GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top),
-        GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top)]
+    let layoutColums = [GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top),
+                        GridItem(.flexible(minimum: 150, maximum: 500), alignment: .top)]
     
     var body: some View {
         VStack(){
@@ -28,9 +27,9 @@ struct LikedCatListView: View {
             Spacer()
             
             ScrollView(.vertical, showsIndicators: false){
-                LazyVGrid(columns: layout, alignment: .center){
-                    ForEach(LikedcatsDatas,id: \.self){ Likedcat  in
-                        LikedCatItem(cat: Likedcat, likedCatItemViewModel: .init())
+                LazyVGrid(columns: layoutColums, alignment: .center){
+                    ForEach(Likedcats,id: \.self){ Likedcat  in
+                        LikedCatItem(cat: Likedcat, CviewModel: .init(), likedCatItemViewModel: .init())
                     }
                 }.frame(
                     minWidth: 0,
@@ -46,7 +45,7 @@ struct LikedCatListView: View {
 struct LikeItemView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            LikedCatListView(Likedcats: catsData)
+            LikedCatListView()
                 .previewDevice("iPhone 12 Pro Max")
         }
     }

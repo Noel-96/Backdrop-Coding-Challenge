@@ -10,16 +10,16 @@ import SwiftUI
 import Combine
 
 class ImageLoader {
-
+    
     private let urlSession: URLSession
     private let cache: NSCache<NSURL, UIImage>
-
+    
     init(urlSession: URLSession = .shared,
          cache: NSCache<NSURL, UIImage> = .init()) {
         self.urlSession = urlSession
         self.cache = cache
     }
-
+    
     func publisher(for url: URL) -> AnyPublisher<UIImage, Error> {
         if let image = cache.object(forKey: url as NSURL) {
             return Just(image)

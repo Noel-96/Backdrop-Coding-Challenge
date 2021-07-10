@@ -13,7 +13,7 @@ final class CatBreedNetworkRequest{
         label: "NetworkRequest.queue",
         qos: .background
     )
-
+    
     deinit {
         self.dataTask?.cancel()
     }
@@ -30,34 +30,22 @@ final class CatBreedNetworkRequest{
         request.addValue("7d5a7390-46dd-44d1-973b-a531bc07b6f2", forHTTPHeaderField: "x-api-key")
         
         return URLSession.shared
-            .dataTaskPublisher(for: request) // 1. Foundation's URLSession now has dataTask `Publisher`
-
-            /*
-             process HTTP request's response data
-             */
-            .map { $0.data } // 2. we retrieve `data` from the Publisher's `Output` tuple
-            .mapError(APIServiceError.mappedFromRawError) // 3. catch and map error that the dataTask `Publisher` emits
-
-            /*
-             decode response's data to model
-             */
-            .decode(type: [CatModel].self, decoder: JSONDecoder()) // 4. Decode #3 data into array of `Splash` model
-            .mapError(APIServiceError.jsonDecoderError) // 5. catch and map error from JSONDecoder
-
-            /*
-             dispatch completion
-             */
-            .subscribe(on: self.backgroundQueue) // process on background/private queue
-            .receive(on: DispatchQueue.main) // send result on main queue
-
-            /*
-             because SplashPubliser type signature is AnyPublisher<[Splash], SplashError>
-             and the publisher we received was from URLSession.shared.dataTaskPublisher
-             so: URLSession.shared.dataTaskPublisher -> AnyPublisher<[Splash], SplashError>
-             -> we use AnyPublisher to hide implementation details to outside, hence "type-erased"
-             */
+            .dataTaskPublisher(for: request)
+            // 1. Foundation's URLSession now has dataTask `Publisher`
+            .map { $0.data }
+            // 2. we retrieve `data` from the Publisher's `Output` tuple
+            .mapError(APIServiceError.mappedFromRawError)
+            // 3. catch and map error that the dataTask `Publisher` emits
+            .decode(type: [CatModel].self, decoder: JSONDecoder())
+            // 4. Decode #3 data into array of `CatModel` model
+            .mapError(APIServiceError.jsonDecoderError)
+            // 5. catch and map error from JSONDecoder
+            .subscribe(on: self.backgroundQueue)
+            // process on background/private queue
+            .receive(on: DispatchQueue.main)
+            // send result on main queue
+            
+            //we use AnyPublisher to hide implementation details to outside, hence "type-erased"
             .eraseToAnyPublisher()
-
-
     }
 }

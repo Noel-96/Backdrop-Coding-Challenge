@@ -9,8 +9,10 @@ import SwiftUI
 
 struct LikedCatItem: View {
     var cat:LikedCat
+    
+    @ObservedObject var CviewModel: CatListViewModel
     @StateObject var likedCatItemViewModel: LikedCatItemViewModel
-    @StateObject var viewModel = ImageProvider()
+    @StateObject var imageHandlerViewModel = ImageProvider()
     
     var body: some View {
         VStack(alignment: .center){
@@ -25,7 +27,7 @@ struct LikedCatItem: View {
             
             
             HStack(alignment: .top){
-                Text(cat.catName ?? "default cat name")
+                Text(cat.catName ?? "cat name not found")
                     .font(.headline)
                     .fontWeight(.regular)
                     .multilineTextAlignment(.leading)
@@ -35,8 +37,8 @@ struct LikedCatItem: View {
                 Spacer()
                 
                 Button(action: {
-                    print("Edit red button was tapped")
                     likedCatItemViewModel.removeLikedCatPicture(likedCat: cat)
+                    //CviewModel.fetchList()
                 }) {
                     Image( "redFilled_heart")
                         .resizable()
@@ -44,7 +46,7 @@ struct LikedCatItem: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(width:25,height:25)
                 }
-               
+                
             }
             .padding(.top)
             .frame(width:150)

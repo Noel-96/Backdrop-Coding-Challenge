@@ -8,17 +8,18 @@
 import SwiftUI
 
 struct HomeTabView: View {
+    
     var body: some View {
+        
         TabView {
-            CatListView(viewModel: .init())
+            CatListView(catListViewModel: .init())
                 .tabItem {
                     Image("tab_cat")
-                    
                     Text("All Cats")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                 }
             
-            LikedCatListView(Likedcats: catsData)
+            LikedCatListView()
                 .tabItem {
                     Image( "black_heart")
                     Text("Cats I Like")

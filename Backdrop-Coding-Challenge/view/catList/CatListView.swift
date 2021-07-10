@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CatListView: View {
-    @ObservedObject var viewModel: CatListViewModel
+    @ObservedObject var catListViewModel: CatListViewModel
     
     var body: some View {
         VStack(){
@@ -21,35 +21,34 @@ struct CatListView: View {
             
             Spacer()
             
-            if viewModel.isLoading {
-            ProgressView()
-                .frame(width: 40, height: 40)
+            if catListViewModel.isLoading {
+                ProgressView()
+                    .frame(width: 50, height: 50)
             }
-            
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack(){
-                    ForEach(viewModel.models,id: \.name){ cat  in
+                    ForEach(catListViewModel.catApiList,id: \.name){ cat  in
                         CatItem(cat: cat, catItemViewModel: .init())
                     }
                 }
             }
             .onAppear(perform: fetchData)
             
-            Text(viewModel.errorMessage)
+            Text(catListViewModel.errorMessage)
                 .lineLimit(nil)
                 .multilineTextAlignment(.center)
         }
     }
     
     private func fetchData() {
-        self.viewModel.fetchList()
+        self.catListViewModel.fetchList()
     }
     
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        CatListView(viewModel: .init())
+        CatListView(catListViewModel: .init())
     }
 }

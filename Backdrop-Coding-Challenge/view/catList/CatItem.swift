@@ -10,25 +10,24 @@ import SwiftUI
 struct CatItem: View {
     
     var cat:CatModel
+    
     @Environment(\.managedObjectContext) var managedObjectContext
-    @StateObject var viewModel = ImageProvider()
+    @StateObject var imageHandlerViewModel = ImageProvider()
     @StateObject var catItemViewModel: CatItemViewModel
     
     var body: some View {
         HStack(alignment: .center, spacing: 15.0){
             
-            Image(uiImage: viewModel.image).resizable()
+            Image(uiImage: imageHandlerViewModel.image).resizable()
                 .renderingMode(.original)
                 .aspectRatio(contentMode:.fill)
                 .frame(width:60,height:60)
                 .cornerRadius(10)
                 .overlay(RoundedRectangle(cornerRadius: 10)
-                .stroke(Color.black, lineWidth: 1))
+                            .stroke(Color.black, lineWidth: 1))
                 .onAppear {
-                    viewModel.loadImage(url:URL(string: cat.image?.url ?? "https://miro.medium.com/max/1400/0*H3jZONKqRuAAeHnG.jpg")! )
-                    }
-                
-            
+                    imageHandlerViewModel.loadImage(url:URL(string: cat.image?.url ?? "https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png")! )
+                }
             
             Text(cat.name)
                 .font(.headline)
@@ -37,19 +36,21 @@ struct CatItem: View {
             
             Spacer()
             
-            
             Button(action: {
-                print("Edit button was tapped")
-                let likedCat = LikedCat(context: managedObjectContext)
-                let imageData = viewModel.image.jpegData(compressionQuality: 1.0)
-                catItemViewModel.likeCatPicture(id: cat.id, catName: cat.name, imageData: imageData!, isLiked: true, likedCat: likedCat)
-            }) {
-                Image( "empty_heart")
+                    if imageHandlerViewModel.image ==  UIImage(imageLiteralResourceName: "Loading_Default_Picture"){
+                        //do nothing ideally i would have put an alert here
+                        print("image is still loading")
+                    } else {
+                        let likedCat = LikedCat(context: managedObjectContext)
+                        let imageData = imageHandlerViewModel.image.jpegData(compressionQuality: 1.0)
+                        catItemViewModel.likeCatPicture(id: cat.id, catName: cat.name, imageData: imageData!, isLiked: true, likedCat: likedCat)
+                    }}) {
+                Image(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) ? "redFilled_heart" : "empty_heart")
                     .resizable()
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
                     .frame(width:25,height:25)
-            }
+            }.disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext)  == true)
             
         }
         .padding([.leading, .bottom, .trailing])
