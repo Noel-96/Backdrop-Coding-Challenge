@@ -29,7 +29,26 @@
 		4EEF8D5E26987B3F006F82CD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5D26987B3F006F82CD /* PersistenceController.swift */; };
 		4EEF8D602698C664006F82CD /* CatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D5F2698C664006F82CD /* CatItemViewModel.swift */; };
 		4EEF8D622698C686006F82CD /* LikedCatItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D612698C686006F82CD /* LikedCatItemViewModel.swift */; };
+		4EEF8D6C269A1B0B006F82CD /* Backdrop_Coding_ChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D6B269A1B0B006F82CD /* Backdrop_Coding_ChallengeTests.swift */; };
+		4EEF8D7A269A1B32006F82CD /* Backdrop_Coding_ChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEF8D79269A1B32006F82CD /* Backdrop_Coding_ChallengeUITests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EEF8D6E269A1B0B006F82CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E02D93B2690D59800A84DB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E02D9422690D59800A84DB7;
+			remoteInfo = "Backdrop-Coding-Challenge";
+		};
+		4EEF8D7C269A1B32006F82CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E02D93B2690D59800A84DB7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E02D9422690D59800A84DB7;
+			remoteInfo = "Backdrop-Coding-Challenge";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4E02D9432690D59800A84DB7 /* Backdrop-Coding-Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Backdrop-Coding-Challenge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,10 +75,30 @@
 		4EEF8D5D26987B3F006F82CD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 		4EEF8D5F2698C664006F82CD /* CatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatItemViewModel.swift; sourceTree = "<group>"; };
 		4EEF8D612698C686006F82CD /* LikedCatItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedCatItemViewModel.swift; sourceTree = "<group>"; };
+		4EEF8D69269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Backdrop-Coding-ChallengeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EEF8D6B269A1B0B006F82CD /* Backdrop_Coding_ChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backdrop_Coding_ChallengeTests.swift; sourceTree = "<group>"; };
+		4EEF8D6D269A1B0B006F82CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EEF8D77269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Backdrop-Coding-ChallengeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EEF8D79269A1B32006F82CD /* Backdrop_Coding_ChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backdrop_Coding_ChallengeUITests.swift; sourceTree = "<group>"; };
+		4EEF8D7B269A1B32006F82CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4E02D9402690D59800A84DB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEF8D66269A1B0B006F82CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEF8D74269A1B32006F82CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -73,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				4E02D9452690D59800A84DB7 /* Backdrop-Coding-Challenge */,
+				4EEF8D6A269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests */,
+				4EEF8D78269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests */,
 				4E02D9442690D59800A84DB7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -81,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				4E02D9432690D59800A84DB7 /* Backdrop-Coding-Challenge.app */,
+				4EEF8D69269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests.xctest */,
+				4EEF8D77269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +262,24 @@
 			path = likedCatList;
 			sourceTree = "<group>";
 		};
+		4EEF8D6A269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EEF8D6B269A1B0B006F82CD /* Backdrop_Coding_ChallengeTests.swift */,
+				4EEF8D6D269A1B0B006F82CD /* Info.plist */,
+			);
+			path = "Backdrop-Coding-ChallengeTests";
+			sourceTree = "<group>";
+		};
+		4EEF8D78269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EEF8D79269A1B32006F82CD /* Backdrop_Coding_ChallengeUITests.swift */,
+				4EEF8D7B269A1B32006F82CD /* Info.plist */,
+			);
+			path = "Backdrop-Coding-ChallengeUITests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +300,42 @@
 			productReference = 4E02D9432690D59800A84DB7 /* Backdrop-Coding-Challenge.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EEF8D68269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EEF8D70269A1B0B006F82CD /* Build configuration list for PBXNativeTarget "Backdrop-Coding-ChallengeTests" */;
+			buildPhases = (
+				4EEF8D65269A1B0B006F82CD /* Sources */,
+				4EEF8D66269A1B0B006F82CD /* Frameworks */,
+				4EEF8D67269A1B0B006F82CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EEF8D6F269A1B0B006F82CD /* PBXTargetDependency */,
+			);
+			name = "Backdrop-Coding-ChallengeTests";
+			productName = "Backdrop-Coding-ChallengeTests";
+			productReference = 4EEF8D69269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4EEF8D76269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EEF8D7E269A1B32006F82CD /* Build configuration list for PBXNativeTarget "Backdrop-Coding-ChallengeUITests" */;
+			buildPhases = (
+				4EEF8D73269A1B32006F82CD /* Sources */,
+				4EEF8D74269A1B32006F82CD /* Frameworks */,
+				4EEF8D75269A1B32006F82CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EEF8D7D269A1B32006F82CD /* PBXTargetDependency */,
+			);
+			name = "Backdrop-Coding-ChallengeUITests";
+			productName = "Backdrop-Coding-ChallengeUITests";
+			productReference = 4EEF8D77269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -250,6 +347,14 @@
 				TargetAttributes = {
 					4E02D9422690D59800A84DB7 = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					4EEF8D68269A1B0B006F82CD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4E02D9422690D59800A84DB7;
+					};
+					4EEF8D76269A1B32006F82CD = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4E02D9422690D59800A84DB7;
 					};
 				};
 			};
@@ -267,6 +372,8 @@
 			projectRoot = "";
 			targets = (
 				4E02D9422690D59800A84DB7 /* Backdrop-Coding-Challenge */,
+				4EEF8D68269A1B0B006F82CD /* Backdrop-Coding-ChallengeTests */,
+				4EEF8D76269A1B32006F82CD /* Backdrop-Coding-ChallengeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -279,6 +386,20 @@
 				4E02D94E2690D59900A84DB7 /* Preview Assets.xcassets in Resources */,
 				4E02D94B2690D59900A84DB7 /* Assets.xcassets in Resources */,
 				4E02D95D269253BA00A84DB7 /* cats.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEF8D67269A1B0B006F82CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEF8D75269A1B32006F82CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,7 +432,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EEF8D65269A1B0B006F82CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEF8D6C269A1B0B006F82CD /* Backdrop_Coding_ChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEF8D73269A1B32006F82CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEF8D7A269A1B32006F82CD /* Backdrop_Coding_ChallengeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EEF8D6F269A1B0B006F82CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E02D9422690D59800A84DB7 /* Backdrop-Coding-Challenge */;
+			targetProxy = 4EEF8D6E269A1B0B006F82CD /* PBXContainerItemProxy */;
+		};
+		4EEF8D7D269A1B32006F82CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E02D9422690D59800A84DB7 /* Backdrop-Coding-Challenge */;
+			targetProxy = 4EEF8D7C269A1B32006F82CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4E02D9502690D59900A84DB7 /* Debug */ = {
@@ -474,6 +624,84 @@
 			};
 			name = Release;
 		};
+		4EEF8D71269A1B0B006F82CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7FHXQ47S9;
+				INFOPLIST_FILE = "Backdrop-Coding-ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Odin.Backdrop-Coding-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backdrop-Coding-Challenge.app/Backdrop-Coding-Challenge";
+			};
+			name = Debug;
+		};
+		4EEF8D72269A1B0B006F82CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7FHXQ47S9;
+				INFOPLIST_FILE = "Backdrop-Coding-ChallengeTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Odin.Backdrop-Coding-ChallengeTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Backdrop-Coding-Challenge.app/Backdrop-Coding-Challenge";
+			};
+			name = Release;
+		};
+		4EEF8D7F269A1B32006F82CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7FHXQ47S9;
+				INFOPLIST_FILE = "Backdrop-Coding-ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Odin.Backdrop-Coding-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Backdrop-Coding-Challenge";
+			};
+			name = Debug;
+		};
+		4EEF8D80269A1B32006F82CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V7FHXQ47S9;
+				INFOPLIST_FILE = "Backdrop-Coding-ChallengeUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Odin.Backdrop-Coding-ChallengeUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Backdrop-Coding-Challenge";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -491,6 +719,24 @@
 			buildConfigurations = (
 				4E02D9532690D59900A84DB7 /* Debug */,
 				4E02D9542690D59900A84DB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EEF8D70269A1B0B006F82CD /* Build configuration list for PBXNativeTarget "Backdrop-Coding-ChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EEF8D71269A1B0B006F82CD /* Debug */,
+				4EEF8D72269A1B0B006F82CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EEF8D7E269A1B32006F82CD /* Build configuration list for PBXNativeTarget "Backdrop-Coding-ChallengeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EEF8D7F269A1B32006F82CD /* Debug */,
+				4EEF8D80269A1B32006F82CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

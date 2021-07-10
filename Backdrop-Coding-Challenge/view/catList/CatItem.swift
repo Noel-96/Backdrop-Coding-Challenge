@@ -10,7 +10,7 @@ import SwiftUI
 struct CatItem: View {
     
     var cat:CatModel
-    
+  
     @Environment(\.managedObjectContext) var managedObjectContext
     @StateObject var imageHandlerViewModel = ImageProvider()
     @StateObject var catItemViewModel: CatItemViewModel
@@ -51,7 +51,7 @@ struct CatItem: View {
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
                     .frame(width:25,height:25)
-            }.disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext)  == true)
+            }.disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) == true)
             
         }
         .padding([.leading, .bottom, .trailing])
