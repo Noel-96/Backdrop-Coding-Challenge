@@ -44,6 +44,7 @@ struct CatItem: View {
                         let likedCat = LikedCat(context: managedObjectContext)
                         let imageData = imageHandlerViewModel.image.jpegData(compressionQuality: 1.0)
                         catItemViewModel.likeCatPicture(id: cat.id, catName: cat.name, imageData: imageData!, isLiked: true, likedCat: likedCat)
+                        
                     }}) {
                 Image(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) ? "redFilled_heart" : "empty_heart")
                     .resizable()

@@ -14,14 +14,14 @@ struct HomeTabView: View {
         TabView {
             CatListView(catListViewModel: .init())
                 .tabItem {
-                    Image("tab_cat")
+                    Image("tab_cat").renderingMode(.template)
                     Text("All Cats")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                 }
             
             LikedCatListView()
                 .tabItem {
-                    Image( "black_heart")
+                    Image( "black_heart").renderingMode(.template)
                     Text("Cats I Like")
                         .font(.system(size: 30, weight: .bold, design: .rounded))
                 }
