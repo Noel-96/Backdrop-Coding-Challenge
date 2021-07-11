@@ -38,7 +38,6 @@ struct LikedCatItem: View {
                 
                 Button(action: {
                     likedCatItemViewModel.removeLikedCatPicture(likedCat: cat)
-                    //CviewModel.fetchList()
                 }) {
                     Image( "redFilled_heart")
                         .resizable()

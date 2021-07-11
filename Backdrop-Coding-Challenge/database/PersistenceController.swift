@@ -11,7 +11,7 @@ import CoreData
 struct PersistenceController {
     static let shared = PersistenceController()
     
-    let container: NSPersistentContainer
+    var container: NSPersistentContainer
     
     init(){
         container = NSPersistentContainer(name: "LikedCatsDatabase")
