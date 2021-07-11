@@ -55,7 +55,7 @@ struct CatItem: View {
                     .frame(width:25,height:25)
             }
             .alert(isPresented: $showingAlert) {
-                Alert(title: Text(cat.name + " " + "has been added to your favorite cats"), message: Text("...."), dismissButton: .default(Text("OK")))
+                Alert(title: Text(cat.name + " " + "has been added as part of your favorite cats"), message: Text("...."), dismissButton: .default(Text("OK")))
                     }
             .disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) == true)
         }
