@@ -31,6 +31,7 @@ class Backdrop_Coding_ChallengeTests: XCTestCase {
         super.setUp()
         persistenceController = PersistenceController.shared
         persistenceController.container = mockPersistantContainer
+        
         mock_catItemViewModel = CatItemViewModel()
         mock_catListViewModel = CatListViewModel()
         mock_likedCatItemViewModel = LikedCatItemViewModel()

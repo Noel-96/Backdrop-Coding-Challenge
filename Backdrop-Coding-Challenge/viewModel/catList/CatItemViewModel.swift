@@ -11,7 +11,8 @@ import SwiftUI
 import CoreData
 
 final class CatItemViewModel: ObservableObject{
- 
+    var alert:UIAlertController!
+    
     func likeCatPicture(id: String, catName: String , imageData: Data, isLiked: Bool, likedCat: LikedCat) {
         likedCat.catName = catName
         likedCat.id = id
@@ -32,4 +33,6 @@ final class CatItemViewModel: ObservableObject{
         }
         return entitiesCount > 0
     }
+    
+    
 }

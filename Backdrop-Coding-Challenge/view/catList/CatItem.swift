@@ -14,6 +14,7 @@ struct CatItem: View {
     @Environment(\.managedObjectContext) var managedObjectContext
     @StateObject var imageHandlerViewModel = ImageProvider()
     @StateObject var catItemViewModel: CatItemViewModel
+    @State private var showingAlert = false
     
     var body: some View {
         HStack(alignment: .center, spacing: 15.0){
@@ -43,6 +44,7 @@ struct CatItem: View {
                     } else {
                         let likedCat = LikedCat(context: managedObjectContext)
                         let imageData = imageHandlerViewModel.image.jpegData(compressionQuality: 1.0)
+                        self.showingAlert = true
                         catItemViewModel.likeCatPicture(id: cat.id, catName: cat.name, imageData: imageData!, isLiked: true, likedCat: likedCat)
                         
                     }}) {
@@ -51,8 +53,11 @@ struct CatItem: View {
                     .renderingMode(.original)
                     .aspectRatio(contentMode: .fit)
                     .frame(width:25,height:25)
-            }.disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) == true)
-            
+            }
+            .alert(isPresented: $showingAlert) {
+                Alert(title: Text(cat.name + " " + "has been added to your favorite cats"), message: Text("...."), dismissButton: .default(Text("OK")))
+                    }
+            .disabled(catItemViewModel.checkIfCatIsLiked(id: cat.id, managedObjectContext: managedObjectContext) == true)
         }
         .padding([.leading, .bottom, .trailing])
     }
