@@ -12,8 +12,8 @@ To display the cat images you should use the http://thecatapi.com/ it offers a
 
 
 #  ScreenShots
-* https://user-images.githubusercontent.com/20171941/125204421-2aad8d00-e275-11eb-8cc7-a35d43251bc3.PNG
-* * https://user-images.githubusercontent.com/20171941/125204429-39943f80-e275-11eb-9047-5798d3c07386.PNG
+![image](https://user-images.githubusercontent.com/20171941/125204421-2aad8d00-e275-11eb-8cc7-a35d43251bc3.PNG)
+![image](https://user-images.githubusercontent.com/20171941/125204429-39943f80-e275-11eb-9047-5798d3c07386.PNG)
 
 #  Author
 Noel Obaseki
