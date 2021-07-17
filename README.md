@@ -10,6 +10,11 @@ To display the cat images you should use the http://thecatapi.com/ it offers a
 * Faved pets are cached locally and displayed on another list as shown in the design.
 * Write tests for your business logic.
 
+## Features
+* combine for async operations
+* Local persistence using CoreData database
+* MVVM architecture
+* SwiftUI
 
 #  ScreenShots
 ![image](https://user-images.githubusercontent.com/20171941/125204421-2aad8d00-e275-11eb-8cc7-a35d43251bc3.PNG)
