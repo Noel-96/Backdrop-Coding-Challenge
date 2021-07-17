@@ -11,7 +11,9 @@ To display the cat images you should use the http://thecatapi.com/ it offers a
 * Write tests for your business logic.
 
 ## Features
-* combine for async operations
+* Combine for async operations
+* URLSessions for network requests
+* Codable for JSON parsing
 * Local persistence using CoreData database
 * MVVM architecture
 * SwiftUI
