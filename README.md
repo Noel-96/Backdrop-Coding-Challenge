@@ -19,8 +19,9 @@ To display the cat images you should use the http://thecatapi.com/ it offers a
 * SwiftUI
 
 #  ScreenShots
-![image](https://user-images.githubusercontent.com/20171941/125204421-2aad8d00-e275-11eb-8cc7-a35d43251bc3.PNG)
-![image](https://user-images.githubusercontent.com/20171941/125204429-39943f80-e275-11eb-9047-5798d3c07386.PNG)
+<img width="300" alt="Screenshot 2021-11-09 at 08 59 19" src="https://user-images.githubusercontent.com/20171941/125204421-2aad8d00-e275-11eb-8cc7-a35d43251bc3.PNG">
+<img width="300" alt="Screenshot 2021-11-10 at 14 38 45" src="https://user-images.githubusercontent.com/20171941/125204429-39943f80-e275-11eb-9047-5798d3c07386.PNG">
+
 
 #  Author
 Noel Obaseki
